@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Tbe-Xj-NZ8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="KeyboardHandelingLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amc logo" translatesAutoresizingMaskIntoConstraints="NO" id="WAS-Fd-gZN">
+                                <rect key="frame" x="103.5" y="344.5" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="WAS-Fd-gZN" secondAttribute="height" multiplier="1:1" id="hLr-z6-cpl"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YwM-ct-W4E">
+                                <rect key="frame" x="150.5" y="601.5" width="113" height="30"/>
+                                <state key="normal" title="View Showtimes"/>
+                                <connections>
+                                    <segue destination="zhE-vf-HlE" kind="show" id="Sdz-D5-Nvz"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WAS-Fd-gZN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="0mH-7h-0mn"/>
+                            <constraint firstItem="YwM-ct-W4E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BS5-3Y-jhC"/>
+                            <constraint firstItem="YwM-ct-W4E" firstAttribute="top" secondItem="WAS-Fd-gZN" secondAttribute="bottom" constant="50" id="N22-eO-gZc"/>
+                            <constraint firstItem="WAS-Fd-gZN" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.5" id="amr-YH-Elj"/>
+                            <constraint firstItem="WAS-Fd-gZN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="roV-Zh-ctw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="04i-Gi-A4s"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1047.8260869565217" y="126.5625"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="TdY-5Y-lhM">
+            <objects>
+                <viewController id="zhE-vf-HlE" customClass="DetailViewController" customModule="KeyboardHandelingLab" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Khs-Qa-ZdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="55n-3S-cef">
+                                <rect key="frame" x="20" y="612" width="374" height="68"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter username" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="AXj-Bc-Cdo">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Xdh-bk-AtF">
+                                        <rect key="frame" x="0.0" y="34" width="374" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="amc stubs logo" translatesAutoresizingMaskIntoConstraints="NO" id="EcP-hc-u7r">
+                                <rect key="frame" x="103.5" y="384" width="207" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="EcP-hc-u7r" secondAttribute="height" multiplier="207:128" id="bkc-QI-Slh"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="55n-3S-cef" firstAttribute="top" secondItem="EcP-hc-u7r" secondAttribute="bottom" constant="100" id="0i4-MI-JYg"/>
+                            <constraint firstItem="qa2-tq-YPn" firstAttribute="trailing" secondItem="55n-3S-cef" secondAttribute="trailing" constant="20" id="1sy-Hr-87e"/>
+                            <constraint firstItem="EcP-hc-u7r" firstAttribute="width" secondItem="qa2-tq-YPn" secondAttribute="width" multiplier="0.5" id="3x3-5G-D1D"/>
+                            <constraint firstItem="EcP-hc-u7r" firstAttribute="centerX" secondItem="Khs-Qa-ZdC" secondAttribute="centerX" id="HJe-y1-Icv"/>
+                            <constraint firstItem="55n-3S-cef" firstAttribute="leading" secondItem="qa2-tq-YPn" secondAttribute="leading" constant="20" id="RKk-c9-DqC"/>
+                            <constraint firstItem="EcP-hc-u7r" firstAttribute="centerY" secondItem="Khs-Qa-ZdC" secondAttribute="centerY" id="jWa-oh-yU3"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="qa2-tq-YPn"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="9xM-e0-SN7"/>
+                    <connections>
+                        <outlet property="amcLogo" destination="EcP-hc-u7r" id="KYW-XV-Ac3"/>
+                        <outlet property="centerYConstraint" destination="jWa-oh-yU3" id="DSV-ak-n1f"/>
+                        <outlet property="passwordLabel" destination="Xdh-bk-AtF" id="zss-La-5Cj"/>
+                        <outlet property="usernameTextField" destination="AXj-Bc-Cdo" id="7r6-If-F2O"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="scb-kg-QcV" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1882.608695652174" y="126.5625"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="qvI-he-SFR">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="Tbe-Xj-NZ8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="jan-H8-Q3o">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="QTT-R9-O3j"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="r6Z-ZK-UpQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="126.5625"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="amc logo" width="240" height="171"/>
+        <image name="amc stubs logo" width="524" height="194"/>
+    </resources>
+</document>
